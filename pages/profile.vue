@@ -1,7 +1,12 @@
 <template>
   <div>
     <h1>Profile</h1>
-    <button @click="signOut">Sign Out</button>
+    <button
+      class="bg-red-700 hover:bg-red-400 text-white font-bold py-2 px-4 rounded"
+      @click="signOut"
+    >
+      Sign Out
+    </button>
 
     <pre>{{ userStore.user }}</pre>
   </div>

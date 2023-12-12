@@ -1,7 +1,12 @@
 <template>
   <div>
-    <h1>Welcome !</h1>
-    <button @click="signIn">Sign In</button>
+    <h1 class="text-3xl font-bold underline">Hello world!</h1>
+    <button
+      class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+      @click="signIn"
+    >
+      Sign In
+    </button>
   </div>
 </template>
 
