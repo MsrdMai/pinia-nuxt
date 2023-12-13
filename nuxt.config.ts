@@ -15,4 +15,5 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
+  loading: '~/components/Loading.vue',
 });
