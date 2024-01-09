@@ -6,10 +6,10 @@
           src="@/assets/icons/logo.svg"
           width="54"
           height="54"
-          class="fill-current h-12 w-10 mr-2"
+          class="fill-current h-10 w-10 mr-1"
         />
 
-        <span class="font-semibold text-xl tracking-tight">Pinia And Nuxt</span>
+        <p class="font-weight-black">Pinia And Nuxt</p>
       </div>
       <div class="block lg:hidden">
         <button
@@ -30,28 +30,25 @@
           <NuxtLink
             to="/profile"
             class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4"
-            >Profile</NuxtLink
+          >
+            <p class="font-weight-bold">Profile</p></NuxtLink
+          >
+
+          <NuxtLink
+            to="/doce"
+            class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4"
+          >
+            <p class="font-weight-bold">Doce</p></NuxtLink
           >
 
           <NuxtLink
             to="/"
             class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4"
-            >Doce</NuxtLink
-          >
-
-          <NuxtLink
-            to="/"
-            class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4"
-            >Home</NuxtLink
+            ><p class="font-weight-bold">Home</p></NuxtLink
           >
         </div>
         <div>
-          <button
-            class="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0"
-            @click="signOut"
-          >
-            Sign out
-          </button>
+          <v-btn variant="outlined" @click="signOut" color="white"> Sign out </v-btn>
         </div>
       </div>
     </nav>

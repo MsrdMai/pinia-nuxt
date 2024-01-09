@@ -9,6 +9,7 @@ export const useUserStore = defineStore('user', () => {
 
   const setToken = (data?: string) => (token.value = data);
   const setUser = (data?: any) => (user.value = data);
+
   const signIn = async (data: any) => {
     try {
       const res = await $fetch<User>('https://dummyjson.com/auth/login', {
@@ -26,10 +27,12 @@ export const useUserStore = defineStore('user', () => {
   };
 
   const fetchCustomer = async () => {
+    const { session, refresh, update, reset } = await useSession();
     if (token.value) {
       try {
         const res = await $fetch<Customer>('https://dummyjson.com/users/1');
         setUser(res);
+        await update({ user: res });
       } catch (error) {
         setUser();
         console.log(error);
@@ -37,9 +40,10 @@ export const useUserStore = defineStore('user', () => {
     }
   };
 
-  const logout = () => {
+  const logout = async () => {
     setToken();
     setUser();
+    await reset();
   };
 
   return { user, token, logout, signIn, fetchCustomer, setToken, setUser };

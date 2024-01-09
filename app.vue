@@ -2,9 +2,10 @@
   <div>
     <!-- <NuxtWelcome /> -->
     <Loading />
-
     <NuxtLayout>
-      <NuxtPage />
+      <v-app>
+        <NuxtPage />
+      </v-app>
     </NuxtLayout>
   </div>
 </template>
